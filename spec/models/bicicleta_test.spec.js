@@ -46,8 +46,8 @@ describe('Bicicleta.removeById',()=>{
     it('debe borrar la bici con id 1',()=>{
         expect(Bicicleta.allBicis.length).toBe(0);
 
-        var aBici= new Bicicleta(1,'azul','montaña', [-30.9104124, -55.5425399])
-        var aBici2= new Bicicleta(2,'roja','montaña',[-30.9104124, -55.5425399])
+        var aBici= new Bicicleta(1,'azul','montaña', [-30.9104124, -55.5425399]);
+        var aBici2= new Bicicleta(2,'roja','montaña',[-30.9104124, -55.5425399]);
         Bicicleta.add(aBici)
         Bicicleta.add(aBici2)
 

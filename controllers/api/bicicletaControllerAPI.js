@@ -1,5 +1,5 @@
 var Bicicleta = require('../../models/bicicleta');
-const { findById } = require('../../models/bicicleta');
+//const { findById } = require('../../models/bicicleta');
 
 exports.bicicleta_list = function (req, res) {
     res.status(200).json({
@@ -8,7 +8,7 @@ exports.bicicleta_list = function (req, res) {
     });
 }
 
-exports.bicicleta_create = function (req, res) {
+exports.bicicleta_create = function(req,res){
     var bici = new Bicicleta(req.body.id, req.body.color, req.body.modelo);
     bici.ubicacion = [req.body.lat, req.body.lng];
 
@@ -17,7 +17,6 @@ exports.bicicleta_create = function (req, res) {
     res.status(200).json({
         bicicleta: bici
     });
-
 }
 
 exports.bicicleta_delete = function (req, res) {
@@ -25,7 +24,7 @@ exports.bicicleta_delete = function (req, res) {
     res.status(204).send();
 
 }
-exports.bicileta_update = function (req, res) {
+exports.bicicleta_update = function (req, res) {
 
         var bici = Bicicleta.findById(req.body.id);
 
