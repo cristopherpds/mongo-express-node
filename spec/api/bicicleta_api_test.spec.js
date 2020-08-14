@@ -19,7 +19,6 @@ describe('Bicicleta API', () =>{
 
     });
 
-
     describe('POST BICICLETAS /create', () =>{
         it('STATUS 200', (done) => {
             var headers = {'content-type': 'aplication/json'};
